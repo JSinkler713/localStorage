@@ -15,4 +15,17 @@ So why even use a database when we have localStorage? Well, when your databases 
 
 Notice the `'`'s. The keys and values are strings. This may have you starting to get dissapointed. You may be wondering if you can store complex datatypes in there. The answer is a murky **yes and no**.
 
-### 
+### JSON.parse && JSON.stringify
+
+You have probably seen these used here and there, and they are great for helping convert complex datatypes into something localStorage can understand. Let's look at the following code block. This is taken from a project I was working on where I wanted to store the recent searches of my users, so that they wouldn't have to type them over again.
+
+The important part is it's **searches** not **search** which with javascript leads us to want to use an array. So
+
+```javascript
+    // step 1. retrieve searches
+    let searches = localStorage.getItem('searches') // comes back like this '["brazil", "costa rica", "hawaii"]'
+    // step 2. since it's really just a string at this point we need to parse it
+    searches = JSON.parse(searches)
+```
+
+You could do all the steps at once, I've simply broken it down to two lines so that we can think about the process. Local Storage will only save strings, but you can wrap anything in quotes to make it a string. In order to **unwrap** it, we use `JSON.parse()`.
