@@ -29,3 +29,17 @@ The important part is it's **searches** not **search** which with javascript lea
 ```
 
 You could do all the steps at once, I've simply broken it down to two lines so that we can think about the process. Local Storage will only save strings, but you can wrap anything in quotes to make it a string. In order to **unwrap** it, we use `JSON.parse()`.
+
+Likewise when we want to store something like an array in localStorage we need to wrap it up in quotes. Javscript's `Json.stringify()` will go ahead and wrap up our array and convert it into a string for storage. Let's imagine we call a function with a newSearch we want to add in.
+
+```javascript
+  function updateSearches(newSearch) {
+  // step 1. prep our new array of searches with spread operator
+  // ** I an assuming we have already retrieved and parsed searches from localStorage
+  let newSearchList = [ ...searches, newSearch]
+  // step 2. stringify
+  newSearchList = JSON.stringify(newSearchList) // it's now wrapped up '[...]'
+  // step 3. store it as a string
+  localStorage.setItem('searches', newSearchList)
+  }
+```
