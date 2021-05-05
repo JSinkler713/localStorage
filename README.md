@@ -52,3 +52,15 @@ There are a few more things you want to be aware of with localStorage. This is t
   }
 ```
 
+### Where is it?
+
+To see what's in your localStorage you can open up your developer tools and go to Application. You will see a number of different options below, under Storage look into Local Storage, and you should be able to see your key value pairs. You will also notice Session Storage which works similarly but will not last after the browser closes. See diagram below.
+
+!()[]
+
+Alright. That's it. Have fun with it. Did I say you could store objects too?
+!()[]
+
+Happy Coding,
+
+James
