@@ -43,3 +43,12 @@ Likewise when we want to store something like an array in localStorage we need t
   localStorage.setItem('searches', newSearchList)
   }
 ```
+
+There are a few more things you want to be aware of with localStorage. This is the function I use to set mySearches back to an empty array. The weather app I am using this in right now is built with React, so you can see that I also update my react state when I change my localStorage. You don't have to do this, it's simply how my app is structured that it made sense to do this for me.
+```
+  const clearSearchHistory = ()=> {
+    localStorage.setItem('searches', JSON.stringify([]))
+    setPreviousSearches([]) // only relevent for React State management
+  }
+```
+
