@@ -56,7 +56,7 @@ There are a few more things you want to be aware of with localStorage. This is t
 
 To see what's in your localStorage you can open up your developer tools and go to Application. You will see a number of different options below, under Storage look into Local Storage, and you should be able to see your key value pairs. You will also notice Session Storage which works similarly but will not last after the browser closes. See diagram below.
 
-!()[]
+![here it is](https://github.com/JSinkler713/localStorage/blob/0cf4886416f71c03145a5acd267d685dea189ef1/Screen%20Shot%202021-05-04%20at%205.16.55%20PM.png)
 
 Alright. That's it. Have fun with it. Did I say you could store objects too?
 !()[]
