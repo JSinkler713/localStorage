@@ -4,8 +4,9 @@ Local Storage is a great way to store some things that are specific to the user 
 
 LocalStorage is the right choice here, because you want the settings to persist **even when the browser is closed and reopened.** vs sessionStorage. (See more here [mdn](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)). So something like dark mode preference, or in the case of a recent app I've been working on, recent searches in an input field, you may want access to these whenever your user opens up your site again.
 
-Example on weather app:
-!()[]
+Example on weather app
+
+![weather-app-ex-searches](https://github.com/JSinkler713/localStorage/blob/6ee78a7dbf9267344ad887532b151e09c9549adb/Screen%20Shot%202021-05-04%20at%205.58.52%20PM.png)
 
 
 
@@ -59,16 +60,13 @@ There are a few more things you want to be aware of with localStorage. This is t
 
 ### Where is it?
 
-To see what's in your localStorage you can open up your developer tools and go to Application. You will see a number of different options below, under Storage look into Local Storage, and you should be able to see your key value pairs. You will also notice Session Storage which works similarly but will not last after the browser closes. See diagram below.
+To see what's in your localStorage you can open up your **developer tools** and go to **Application**. You will see a number of different options below, under **Storage** look into **Local Storage**, and you should be able to see your key value pairs. You will also notice Session Storage which works similarly but will not last after the browser closes. See diagram below.
 
-![here it is](https://github.com/JSinkler713/localStorage/blob/0cf4886416f71c03145a5acd267d685dea189ef1/Screen%20Shot%202021-05-04%20at%205.16.55%20PM.png)
+![shows where it is](https://github.com/JSinkler713/localStorage/blob/0aecbf28b0542257af8cb663fd6fa16ea171285f/Screen%20Shot%202021-05-04%20at%205.46.29%20PM.png)
 
-Alright. 
+Alright. That's it. Have fun with it. 
 
-That's it. Have fun with it. I have a basic little rustic version on [this codesandbox]() if you would like to see it with React using react's reach/combobox field to show some previous searches.
-
-#### Did I mention you could store objects too?
-![object-example](https://github.com/JSinkler713/localStorage/blob/0aecbf28b0542257af8cb663fd6fa16ea171285f/Screen%20Shot%202021-05-04%20at%205.46.29%20PM.png)
+I have a basic little rustic version on [this codesandbox](https://codesandbox.io/s/basic-localstorage-recent-search-sle1x) if you would like to see it with React and @reach/combobox to show some previous searches. The example is primitive. Feel free to fork it and improve it. Adding a way to clear for instance would be a good extension.
 
 
 Happy Coding,
