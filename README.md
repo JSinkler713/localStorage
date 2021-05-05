@@ -4,6 +4,11 @@ Local Storage is a great way to store some things that are specific to the user 
 
 LocalStorage is the right choice here, because you want the settings to persist **even when the browser is closed and reopened.** vs sessionStorage. (See more here [mdn](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)). So something like dark mode preference, or in the case of a recent app I've been working on, recent searches in an input field, you may want access to these whenever your user opens up your site again.
 
+Example on weather app:
+!()[]
+
+
+
 ### No database, no problem
 
 So why even use a database when we have localStorage? Well, when your databases start to get more complex, you may want there to be associations that relate to other parts of your database. One of the **benefits** of localStorage is how simple it is. Items are stored in key, value pairs. Example
@@ -58,8 +63,13 @@ To see what's in your localStorage you can open up your developer tools and go t
 
 ![here it is](https://github.com/JSinkler713/localStorage/blob/0cf4886416f71c03145a5acd267d685dea189ef1/Screen%20Shot%202021-05-04%20at%205.16.55%20PM.png)
 
-Alright. That's it. Have fun with it. Did I say you could store objects too?
-!()[]
+Alright. 
+
+That's it. Have fun with it. I have a basic little rustic version on [this codesandbox]() if you would like to see it with React using react's reach/combobox field to show some previous searches.
+
+#### Did I mention you could store objects too?
+![object-example](https://github.com/JSinkler713/localStorage/blob/0aecbf28b0542257af8cb663fd6fa16ea171285f/Screen%20Shot%202021-05-04%20at%205.46.29%20PM.png)
+
 
 Happy Coding,
 
